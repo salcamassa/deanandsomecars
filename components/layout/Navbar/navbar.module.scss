@@ -1,0 +1,13 @@
+.navLink {
+  color: #222732 !important;
+}
+
+.active {
+  font-weight: 700;
+}
+
+@media (max-width: 450px) {
+  .logoLink {
+    max-width: 300px !important;
+  }
+}

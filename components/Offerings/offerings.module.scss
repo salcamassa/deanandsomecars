@@ -1,0 +1,35 @@
+.cardIcon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  position: relative;
+  bottom: -35px;
+  border-radius: 5px;
+  font-size: 50px;
+  color: white;
+  svg{
+    padding-bottom: 5px;
+  }
+  &.icon1 {
+    background-color: #ff4605;
+  }
+  &.icon2 {
+    background-color: #0575ff;
+  }
+  &.icon3 {
+    background-color: #0fdf2c;
+  }
+}
+
+.cardContent {
+  background-color: #f8f8f8;
+  padding: 50px 1.5rem 25px 1.5rem;
+  border-radius: 5px;
+  .cardHeader {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  p {
+    color: #868e96;
+  }
+}
