@@ -1,0 +1,26 @@
+.contentContainer {
+  transition: all 0.5s ease-in-out;
+  height: fit-content;
+  font-size: 18px;
+  margin-right: 30px;
+  padding-top: 1rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 26px;
+  color: #222732;
+}
+
+.titleSection {
+  cursor: pointer;
+}
+
+.angleIcon {
+  font-size: 26px;
+}
+
+.hidden {
+  height: 0;
+  display: none;
+}

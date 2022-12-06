@@ -5,7 +5,6 @@ import logo from '/public/logo.svg'
 import styles from "./navbar.module.scss";
 
 const navData = [
-  { linkText: "About", href: '/about' },
   { linkText: "Services", href: '/services' },
   { linkText: "FAQ", href: '/faq' },
 ]
