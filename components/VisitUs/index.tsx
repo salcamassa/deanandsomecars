@@ -5,8 +5,8 @@ import dronePlaceholder from "../../public/drone_placeholder.png";
 const VisitUs = () => {
   return (
     <>
-      <div className="container-fluid bg-white">
-        <div className="container py-5">
+      <div className="container-fluid bg-white h-100">
+        <div className="container py-5 my-5">
           <div className="row text-center">
             <div className="col-lg-8">
               <Image

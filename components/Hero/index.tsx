@@ -146,7 +146,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={`${styles.heroStats} container-fluid`}>
-        <div className="container d-flex flex-wrap justify-content-around py-3">
+        <div className="container d-flex flex-wrap justify-content-around py-5">
           <div className="fs-2">
             <FaMedal />
             <span className="ps-3 fs-5">

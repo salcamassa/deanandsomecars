@@ -6,7 +6,7 @@ import { GiMoneyStack } from "react-icons/gi";
 const Offerings = () => {
   return (
     <>
-      <div className="container-fluid bg-white">
+      <div className="container-fluid bg-white py-5">
         <div className="container text-center py-5">
           <h1>Services Offered</h1>
           <div className="row py-5">
