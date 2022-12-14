@@ -53,7 +53,7 @@ const Navbar = ({ lightVersion }: { lightVersion?: boolean }) => {
                   <a
                     className={`${
                       router.pathname === data.href ? "active" : ""
-                    } nav-link ${lightVersion ? "text-white" : ""}`}
+                    } nav-link ${lightVersion ? "text-white" : "color-b1"}`}
                   >
                     {data.linkText}
                   </a>

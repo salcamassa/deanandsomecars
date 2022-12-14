@@ -42,9 +42,11 @@ a {
 }
 
 /* todo move to specific scss file */
+.color-b1 {
+  color: #222732;
+}
 .navbar {
   a.nav-link {
-    color: #222732 !important;
     max-width: 111px;
     &:last-child {
       margin-right: 25px;
@@ -55,7 +57,7 @@ a {
     font-weight: 700;
   }
 
-  .nav-item{
+  .nav-item {
     align-self: center;
   }
 }
@@ -294,4 +296,3 @@ a {
     }
   }
 }
-
