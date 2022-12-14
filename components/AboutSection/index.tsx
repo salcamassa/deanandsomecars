@@ -1,8 +1,9 @@
-import { FiMail, FiPhone } from "react-icons/fi";
-import styles from "./about-section.module.scss";
 import Image from "next/image";
+import { Tooltip } from "react-bootstrap";
+import { FaInstagram, FaLinkedin, FaSnapchatSquare } from "react-icons/fa";
+import { FiMail, FiPhone } from "react-icons/fi";
 import deanBio from "../../public/deanBio.png";
-import { FaFacebookSquare, FaLinkedin, FaInstagram } from "react-icons/fa";
+import styles from "./about-section.module.scss";
 
 const AboutSection = () => {
   return (
@@ -38,9 +39,27 @@ const AboutSection = () => {
           <div className={`${styles.imageWrapper}`}>
             <Image src={deanBio} alt="Dean & a Car" layout="responsive" />
             <div className={styles.socialIcons}>
-              <div><FaFacebookSquare /></div>
-              <div><FaLinkedin /></div>
-              <div><FaInstagram /></div>
+              <div>
+                <FaSnapchatSquare />
+              </div>
+              <div>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/deanandsomecars/?hl=en"
+                  rel="noreferrer"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
+              <div>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/dean-and-some-cars/"
+                  rel="noreferrer"
+                >
+                  <FaLinkedin />
+                </a>
+              </div>
             </div>
           </div>
         </div>

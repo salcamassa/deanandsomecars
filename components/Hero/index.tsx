@@ -7,6 +7,21 @@ import styles from "./hero.module.scss";
 
 const Hero = () => {
   const [state, handleSubmit] = useForm("''");
+  const vehicleOptions = [
+    "Any Vehicle Type",
+    "Not Sure What Vehicle Type",
+    "Electric",
+    "Plug-in Hybrid ",
+    "Sedan",
+    "Small SUV",
+    "Midsize SUV",
+    "Large SUV",
+    "4x4 Vehicle",
+    "Truck",
+    "Minivan",
+    "Hatchback",
+    "Coupe",
+  ];
 
   return (
     <>
@@ -101,11 +116,9 @@ const Hero = () => {
                 <div className="form-group pt-3">
                   <label htmlFor="LookingFor">I'm looking for...</label>
                   <select className="form-select" id="lookingFor">
-                    <option>Any Vehicle Type</option>
-                    <option>Sedan</option>
-                    <option>SUV</option>
-                    <option>Pick-Up Truck</option>
-                    <option>Super Car</option>
+                    {vehicleOptions.map((o, i) => (
+                      <option key={i}>{o}</option>
+                    ))}
                   </select>
                 </div>
                 <div
@@ -146,7 +159,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={`${styles.heroStats} container-fluid`}>
-        <div className="container d-flex flex-wrap justify-content-around py-5">
+        <div className="container d-flex flex-wrap justify-content-around py-3">
           <div className="fs-2">
             <FaMedal />
             <span className="ps-3 fs-5">

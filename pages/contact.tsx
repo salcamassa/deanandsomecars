@@ -52,18 +52,6 @@ const Contact = () => {
                     <div>deanandsomecars@gmail.com</div>
                   </div>
                 </div>
-
-                {/* <div className={`${styles.socialIcons} py-3`}>
-                  <div>
-                    <FaFacebookSquare />
-                  </div>
-                  <div>
-                    <FaLinkedin />
-                  </div>
-                  <div>
-                    <FaInstagram />
-                  </div>
-                </div> */}
                 <a
                   target="_blank"
                   href="https://calendly.com/deanandsomecars/used-vehicle-purchase"

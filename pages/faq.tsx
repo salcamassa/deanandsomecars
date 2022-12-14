@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer";
 import HeroImage from "../components/layout/HeroImage";
 import Navbar from "../components/layout/Navbar";
 import ToggleSection from "../components/layout/ToggleSection";
-import heroImg from "../public/showroom_bg.png";
+import heroImg from "../public/customer.png";
 import styles from "../styles/FAQ.module.scss";
 
 const faqData = [

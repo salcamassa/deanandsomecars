@@ -6,6 +6,7 @@ import logoLight from "/public/logo-light.svg";
 import styles from "./navbar.module.scss";
 
 const navData = [
+  { linkText: "Home", href: "/" },
   { linkText: "Services", href: "/services" },
   { linkText: "FAQ", href: "/faq" },
 ];

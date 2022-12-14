@@ -37,10 +37,10 @@
     font-size: 2rem;
     display: flex;
     justify-content: end;
-    div {
+    div,a {
       margin-left: 1rem;
       &:hover {
-        color: white;
+        color: white !important;
         cursor: pointer;
       }
     }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaAngleRight } from "react-icons/fa";
+import { BsCircleFill } from "react-icons/bs";
 import Footer from "../components/layout/Footer";
 import HeroImage from "../components/layout/HeroImage";
 import Navbar from "../components/layout/Navbar";
@@ -37,8 +37,8 @@ const Services = () => {
           {servicesData.map((data) => (
             <div className="border-bottom p-2 py-3">
               <div className={`d-flex ${styles.titleSection}`}>
-                <div className={styles.angleIcon}>
-                  <FaAngleRight />
+                <div className={styles.dotIcon}>
+                  <BsCircleFill />
                 </div>
                 <div className={styles.title}>{data}</div>
               </div>
