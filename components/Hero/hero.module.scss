@@ -71,3 +71,9 @@
   color: #868e96;
   font-size: 26px;
 }
+.submitBtn {
+  color: #2b3240;
+  &:hover {
+    color: white !important;
+  }
+}

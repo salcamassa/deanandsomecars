@@ -164,7 +164,7 @@ const Contact = () => {
 
                     <div>
                       <button
-                        className="btn btn-outline-success px-4 py-2 m-1 btn-hover-white"
+                        className={`${styles.submitBtn} btn btn-outline-success px-4 py-2 m-1"`}
                         type="submit"
                         disabled={state.submitting}
                       >

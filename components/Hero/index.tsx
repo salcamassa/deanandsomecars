@@ -12,7 +12,7 @@ const Hero = () => {
     <>
       <div className={`${styles.heroContainer} container-fluid px-0`}>
         <div className={styles.heroGradient}>
-        <Navbar lightVersion={true} />
+          <Navbar lightVersion={true} />
         </div>
         <div>
           <Image
@@ -132,7 +132,7 @@ const Hero = () => {
 
                   <div>
                     <button
-                      className="btn btn-outline-success btn-hover-white"
+                      className={`${styles.submitBtn} btn btn-outline-success`}
                       type="submit"
                       disabled={state.submitting}
                     >

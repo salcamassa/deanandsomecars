@@ -63,7 +63,9 @@ const Navbar = ({ lightVersion }: { lightVersion?: boolean }) => {
             <li className="nav-item">
               <a href="/contact" rel="noreferrer">
                 <button
-                  className="btn btn-outline-warning btn-hover-white"
+                  className={`btn btn-outline-warning ${
+                    lightVersion ? "text-white" : "color-b1"
+                  }`}
                   type="submit"
                 >
                   Contact
