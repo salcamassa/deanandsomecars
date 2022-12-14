@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaAngleDown, FaCaretDown } from "react-icons/fa";
 import Footer from "../components/layout/Footer";
 import HeroImage from "../components/layout/HeroImage";
@@ -84,7 +85,7 @@ const FAQ = () => {
             <div className={styles.infoText}>
               Here are some of the topics I help my customers with most often.
               If you have a question or concern that's not listed here, send me
-              a message on the Contact page.
+              a message on the <Link href={"/contact"}>Contact</Link> page.
             </div>
           </div>
           {faqData.map((data, index) => (

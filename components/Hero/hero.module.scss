@@ -1,5 +1,5 @@
 .heroContainer {
-  height: 75vh; //TODO: add in calculation with bottom stats div height
+  height: calc(100vh - 80px);
   overflow: hidden;
   position: relative;
   background: linear-gradient(
@@ -43,6 +43,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  margin-top: 2rem;
   h1 {
     font-size: 5rem;
   }
@@ -58,7 +59,6 @@
   }
 }
 
-
 .heroForm {
   background: white;
   border: 1px solid lightgray;
@@ -68,6 +68,6 @@
 
 .heroStats {
   background-color: #222732;
-  color: #868E96;
+  color: #868e96;
   font-size: 26px;
 }

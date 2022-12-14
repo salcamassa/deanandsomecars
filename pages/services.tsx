@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
 import Footer from "../components/layout/Footer";
 import HeroImage from "../components/layout/HeroImage";
@@ -27,8 +28,9 @@ const Services = () => {
         <div className={styles.sectionContainer}>
           <div className={`border-bottom text-center p-3`}>
             <div className={styles.infoText}>
-              These are some of the services I'm happt to help my customers
-              with. Reach out on the Contact page for more information.
+              These are some of the services I'm happy to help my customers
+              with. Reach out on the <Link href={"/contact"}>Contact</Link> page
+              for more information.
             </div>
           </div>
 

@@ -1,7 +1,7 @@
 $theme-colors: (
   "primary": #23578e,
   "secondary": #833bec,
-  "success": #1ce1ac,
+  "success": #039f38,
   "info": #ff7d50,
   "warning": #ff4605,
   "danger": #ff007f,
@@ -53,6 +53,23 @@ a {
 
   .active {
     font-weight: 700;
+  }
+
+  .nav-item{
+    align-self: center;
+  }
+}
+
+.navbar.light-version {
+  a.nav-link {
+    color: white !important;
+  }
+
+  .btn {
+    color: white !important;
+    :hover() {
+      color: white !important;
+    }
   }
 }
 
@@ -126,8 +143,8 @@ a {
 .hero_image {
   object-fit: cover;
   object-position: top center;
+  opacity: 0.75;
 }
-
 
 .hero_text {
   text-align: center;
@@ -152,14 +169,14 @@ a {
 }
 
 .contact-info {
-  background-color: #23578e;
+  background-color: #222732;
+  padding: 2rem 3rem;
+  color: #d9d9d9;
 
-  color: #ced4da;
-
-  svg {
-    height: 1.25em;
-    width: 1.25em;
-  }
+  // svg {
+  //   height: 1.25em;
+  //   width: 1.25em;
+  // }
 
   .social-icons {
     color: #f5f5f5;
@@ -243,4 +260,24 @@ a {
 
 .modal-content {
   border: 0;
+}
+
+.visit-us-box {
+  background-color: #f3f4f6;
+  border-radius: 5px;
+  :not(h1) {
+    color: #868e96;
+  }
+}
+
+.color-dg {
+  color: #2b3240;
+}
+
+.btn-hover-white {
+  color: #2b3240;
+
+  &:hover {
+    color: white !important;
+  }
 }

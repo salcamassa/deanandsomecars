@@ -15,7 +15,6 @@ const Home: NextPage = () => {
         <title>Dean & Some Cars</title>
         <meta name="description" content="Dean & Some Cars" />
       </Head>
-      <Navbar />
       <Hero />
       <Offerings />
       <AboutSection/>

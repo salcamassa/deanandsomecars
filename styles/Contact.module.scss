@@ -1,0 +1,30 @@
+.sectionContainer {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  color: #868e96;
+  min-height: 70vh;
+  border-top: lightgray 1px solid;
+}
+
+.socialIcons {
+  font-size: 2rem;
+  display: flex;
+  div {
+    margin-right: 1rem;
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.aptBtn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #fff;
+  &:hover {
+    color: white !important;
+  }
+}

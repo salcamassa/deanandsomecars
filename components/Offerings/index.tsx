@@ -8,7 +8,7 @@ const Offerings = () => {
     <>
       <div className="container-fluid bg-white">
         <div className="container text-center py-5">
-          <h1>What We Offer</h1>
+          <h1>Services Offered</h1>
           <div className="row py-5">
             <div className="col-md-4">
               <div className={`${styles.cardIcon} ${styles.icon1}`}>

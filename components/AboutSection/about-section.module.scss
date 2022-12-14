@@ -1,6 +1,6 @@
 .aboutContainer {
   background-color: #222732;
-  padding: 2rem 3rem;
+  padding: 3rem;
   color: #d9d9d9;
   display: flex;
   flex-wrap: wrap;
@@ -17,12 +17,13 @@
     margin-right: 2rem;
   }
 
-  .textContainer, .imageContainer {
+  .textContainer,
+  .imageContainer {
     z-index: 2;
   }
 
   .grayBg {
-    background: #2B3240;
+    background: #2b3240;
     height: 480px;
     width: 72vw;
     position: absolute;

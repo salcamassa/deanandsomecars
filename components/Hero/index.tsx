@@ -2,6 +2,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import Image from "next/image";
 import { FaCar, FaCheck, FaMedal, FaRegSmile } from "react-icons/fa";
 import heroBg from "../../public/toyota-bg.jpeg";
+import Navbar from "../layout/Navbar";
 import styles from "./hero.module.scss";
 
 const Hero = () => {
@@ -10,7 +11,9 @@ const Hero = () => {
   return (
     <>
       <div className={`${styles.heroContainer} container-fluid px-0`}>
-        <div className={styles.heroGradient}></div>
+        <div className={styles.heroGradient}>
+        <Navbar lightVersion={true} />
+        </div>
         <div>
           <Image
             className={"hero_image"}
@@ -29,9 +32,15 @@ const Hero = () => {
                 I'd love to help you find your dream car today! Book an
                 appointment with me to find out more.
               </p>
-              <button className={`${styles.aptBtn} btn btn-outline-warning`}>
-                Schedule an Appointment
-              </button>
+              <a
+                target="_blank"
+                href="https://calendly.com/deanandsomecars/used-vehicle-purchase"
+                rel="noreferrer"
+              >
+                <button className={`${styles.aptBtn} btn btn-outline-warning`}>
+                  Schedule an Appointment
+                </button>
+              </a>
             </div>
             <div
               className={`${styles.heroForm} col-12 col-md-6 text-start p-4`}
@@ -123,7 +132,7 @@ const Hero = () => {
 
                   <div>
                     <button
-                      className="btn btn-outline-success"
+                      className="btn btn-outline-success btn-hover-white"
                       type="submit"
                       disabled={state.submitting}
                     >
