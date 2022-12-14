@@ -281,3 +281,17 @@ a {
     color: white !important;
   }
 }
+
+.navbar.light-version {
+  a.nav-link {
+    color: white !important;
+  }
+
+  .btn {
+    color: white !important;
+    :hover() {
+      color: white !important;
+    }
+  }
+}
+

@@ -53,7 +53,7 @@ const Navbar = ({ lightVersion }: { lightVersion?: boolean }) => {
                   <a
                     className={`${
                       router.pathname === data.href ? "active" : ""
-                    } nav-link`}
+                    } nav-link ${lightVersion ? "text-white" : ""}`}
                   >
                     {data.linkText}
                   </a>
@@ -62,7 +62,10 @@ const Navbar = ({ lightVersion }: { lightVersion?: boolean }) => {
             ))}
             <li className="nav-item">
               <a href="/contact" rel="noreferrer">
-                <button className="btn btn-outline-warning btn-hover-white" type="submit">
+                <button
+                  className="btn btn-outline-warning btn-hover-white"
+                  type="submit"
+                >
                   Contact
                 </button>
               </a>
