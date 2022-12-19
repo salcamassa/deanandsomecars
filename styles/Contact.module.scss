@@ -21,9 +21,7 @@
 .aptBtn {
   width: 100%;
   padding: 1rem;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #fff;
+  color: #2b3240;
   &:hover {
     color: white !important;
   }
@@ -33,5 +31,18 @@
   color: #2b3240;
   &:hover {
     color: white !important;
+  }
+}
+
+.socialIcons {
+  font-size: 1.75rem;
+  display: flex;
+  margin-top: 1rem;
+  div,
+  a {
+    &:hover {
+      color: white !important;
+      cursor: pointer;
+    }
   }
 }

@@ -1,7 +1,10 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { useState } from "react";
 import {
-    FaCheck
+  FaCheck,
+  FaInstagram,
+  FaLinkedin,
+  FaSnapchatSquare,
 } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
 import Footer from "../components/layout/Footer";
@@ -38,7 +41,7 @@ const Contact = () => {
                   looking for the next best thing - so send me a quick message
                   and I’ll get back to you as quickly as I can.
                 </div>
-                <div className="py-3">
+                <div className="py-2">
                   <div className="d-flex align-items-center">
                     <div className="fs-3 pe-2">
                       <FiPhone />
@@ -51,21 +54,86 @@ const Contact = () => {
                     </div>
                     <div>deanandsomecars@gmail.com</div>
                   </div>
+                  {/* <div className="d-flex justify-content-between flex-wrap">
+                    <div className="d-flex align-items-baseline pe-2">
+                      <div className="fs-3 pe-2">
+                        <FaSnapchatSquare />
+                      </div>
+                      <div>Snapchat</div>
+                    </div>
+                    <div>
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/deanandsomecars/?hl=en"
+                        rel="noreferrer"
+                      >
+                        <div className="d-flex align-items-baseline pe-2">
+                          <div className="fs-3 pe-2">
+                            <FaInstagram />
+                          </div>
+                          <div>Instagram</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/dean-and-some-cars/"
+                        rel="noreferrer"
+                      >
+                        <div className="d-flex align-items-baseline">
+                          <div className="fs-3 pe-2">
+                            <FaLinkedin />
+                          </div>
+                          <div>LinkedIn</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div> */}
+
+                  <div className={styles.socialIcons}>
+                    <div>
+                      <FaSnapchatSquare />
+                    </div>
+                    <div>
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/deanandsomecars/?hl=en"
+                        rel="noreferrer"
+                      >
+                        <FaInstagram />
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/dean-and-some-cars/"
+                        rel="noreferrer"
+                      >
+                        <FaLinkedin />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <a
-                  target="_blank"
-                  href="https://calendly.com/deanandsomecars/used-vehicle-purchase"
-                  rel="noreferrer"
-                >
-                  <button
-                    className={`${styles.aptBtn} btn btn-outline-warning mt-4`}
-                  >
-                    Schedule an Appointment
-                  </button>
-                </a>
               </div>
               <div className="col-lg-8 p-5 bg-white">
-                <div className="fs-3 fw-bold pb-3 color-dg">Send Me a Message</div>
+                <div className="d-flex justify-content-between align-items-center pb-3">
+                  <div className="fs-3 fw-bold color-dg">
+                    Send Me a Message
+                  </div>
+                  <a
+                    target="_blank"
+                    href="https://calendly.com/deanandsomecars/vehicle-consultation"
+                    rel="noreferrer"
+                  >
+                    <button
+                      className={`${styles.aptBtn} btn btn-outline-primary`}
+                    >
+                      Schedule an Appointment
+                    </button>
+                  </a>
+                </div>
+
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-md-6">
@@ -125,7 +193,7 @@ const Contact = () => {
                       className="form-control"
                       id="contactMessage"
                       name="Message"
-                      rows={7}
+                      rows={5}
                     ></textarea>
                   </div>
                   <div

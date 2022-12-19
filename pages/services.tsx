@@ -35,11 +35,11 @@ const Services = () => {
           </div>
 
           {servicesData.map((data) => (
-            <div className="border-bottom p-2 py-3">
-              <div className={`d-flex ${styles.titleSection}`}>
-                <div className={styles.dotIcon}>
+            <div className="p-2 py-3">
+              <div className={`d-flex justify-content-center`}>
+                {/* <div className={styles.dotIcon}>
                   <BsCircleFill />
-                </div>
+                </div> */}
                 <div className={styles.title}>{data}</div>
               </div>
             </div>

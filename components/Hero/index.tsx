@@ -49,7 +49,7 @@ const Hero = () => {
               </p>
               <a
                 target="_blank"
-                href="https://calendly.com/deanandsomecars/used-vehicle-purchase"
+                href="https://calendly.com/deanandsomecars/vehicle-consultation"
                 rel="noreferrer"
               >
                 <button className={`${styles.aptBtn} btn btn-outline-warning`}>
