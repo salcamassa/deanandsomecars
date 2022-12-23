@@ -1,10 +1,10 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { useState } from "react";
 import {
-  FaCheck,
+  FaCheck, FaFacebookSquare,
   FaInstagram,
   FaLinkedin,
-  FaSnapchatSquare,
+  FaSnapchatSquare
 } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
 import Footer from "../components/layout/Footer";
@@ -89,11 +89,20 @@ const Contact = () => {
                         </div>
                       </a>
                     </div>
-                  </div> */}
+                  </div> 
+                  
+                  
+                  */}
 
                   <div className={styles.socialIcons}>
                     <div>
-                      <FaSnapchatSquare />
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/deanandsomecars?mibextid=LQQJ4d"
+                        rel="noreferrer"
+                      >
+                        <FaFacebookSquare />
+                      </a>
                     </div>
                     <div>
                       <a
@@ -113,14 +122,21 @@ const Contact = () => {
                         <FaLinkedin />
                       </a>
                     </div>
+                    <div>
+                      <a
+                        target="_blank"
+                        href="https://t.snapchat.com/W76X7U6u"
+                        rel="noreferrer"
+                      >
+                        <FaSnapchatSquare />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-8 p-5 bg-white">
                 <div className="d-flex justify-content-between align-items-center pb-3">
-                  <div className="fs-3 fw-bold color-dg">
-                    Send Me a Message
-                  </div>
+                  <div className="fs-3 fw-bold color-dg">Send Me a Message</div>
                   <a
                     target="_blank"
                     href="https://calendly.com/deanandsomecars/vehicle-consultation"

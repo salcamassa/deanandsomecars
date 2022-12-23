@@ -28,17 +28,7 @@ const Hero = () => {
       <div className={`${styles.heroContainer} container-fluid px-0`}>
         <div className={styles.heroGradient}>
           <Navbar lightVersion={true} />
-        </div>
-        <div>
-          <Image
-            className={"hero_image"}
-            src={heroBg}
-            alt="hero"
-            layout="fill"
-          />
-        </div>
-        <div className={`${styles.heroText} container`}>
-          <div className="row justify-content-between">
+          <div className={`${styles.heroHeight} container d-flex flex-wrap justify-content-between align-items-center`}>
             <div
               className={`${styles.heroTextContainer} text-start text-white col-12 col-md-6 m-x-3`}
             >
@@ -157,6 +147,15 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        <div>
+          <Image
+            className={"hero_image"}
+            src={heroBg}
+            alt="hero"
+            layout="fill"
+          />
+        </div>
+
       </div>
       <div className={`${styles.heroStats} container-fluid`}>
         <div className="container d-flex flex-wrap justify-content-around py-3">

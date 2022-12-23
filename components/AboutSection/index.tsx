@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Tooltip } from "react-bootstrap";
-import { FaInstagram, FaLinkedin, FaSnapchatSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
 import deanBio from "../../public/deanBio.png";
 import styles from "./about-section.module.scss";
@@ -22,25 +21,30 @@ const AboutSection = () => {
             send me a quick message on the Contact page and I’ll get back to you
             as quickly as I can.
           </div>
-          <div className="d-flex align-items-center">
-            <div className="fs-3 pe-2">
-              <FiPhone />
+          <div className="d-flex flex-wrap justify-content-between align-items-end">
+            <div>
+              <div className="d-flex align-items-center">
+                <div className="fs-3 pe-2">
+                  <FiPhone />
+                </div>
+                <div className="fw-bold">(631) 379-5914</div>
+              </div>
+              <div className="d-flex align-items-center">
+                <div className="fs-3 pe-2">
+                  <FiMail />
+                </div>
+                <div>deanandsomecars@gmail.com</div>
+              </div>
             </div>
-            <div className="fw-bold">(631) 379-5914</div>
-          </div>
-          <div className="d-flex align-items-center">
-            <div className="fs-3 pe-2">
-              <FiMail />
-            </div>
-            <div>deanandsomecars@gmail.com</div>
-          </div>
-        </div>
-        <div className={styles.imageContainer}>
-          <div className={`${styles.imageWrapper}`}>
-            <Image src={deanBio} alt="Dean & a Car" layout="responsive" />
             <div className={styles.socialIcons}>
               <div>
-                <FaSnapchatSquare />
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/deanandsomecars?mibextid=LQQJ4d"
+                  rel="noreferrer"
+                >
+                  <FaFacebookSquare />
+                </a>
               </div>
               <div>
                 <a
@@ -61,6 +65,11 @@ const AboutSection = () => {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+        <div className={styles.imageContainer}>
+          <div className={`${styles.imageWrapper}`}>
+            <Image src={deanBio} alt="Dean & a Car" layout="responsive" />
           </div>
         </div>
         <div className={styles.grayBg}></div>

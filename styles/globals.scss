@@ -48,7 +48,7 @@ a {
   a.nav-link {
     max-width: 111px;
     &:last-child {
-      margin-right: 45px;
+      // margin-right: 45px;
     }
   }
 
@@ -286,6 +286,16 @@ a {
     color: white !important;
     :hover() {
       color: white !important;
+    }
+  }
+}
+
+@media (min-width: 990px) {
+  .navbar {
+    a.nav-link {
+      &:last-child {
+        margin-right: 45px;
+      }
     }
   }
 }

@@ -3,13 +3,13 @@
   padding: 3rem;
   color: #d9d9d9;
   display: flex;
-  height: 100vh;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 
   .imageWrapper {
-    width: 420px;
+    width: 75vw;
+    max-width: 420px;
   }
 
   .textWrapper {
@@ -34,10 +34,11 @@
   }
 
   .socialIcons {
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
     justify-content: end;
-    div,a {
+    div,
+    a {
       margin-left: 1rem;
       &:hover {
         color: white !important;
@@ -50,5 +51,8 @@
 @media (max-width: 1058px) {
   .imageWrapper {
     margin-top: 2rem;
+  }
+  .grayBg {
+    height: 0px !important;
   }
 }

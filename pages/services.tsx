@@ -35,7 +35,7 @@ const Services = () => {
           </div>
 
           {servicesData.map((data) => (
-            <div className="p-2 py-3">
+            <div className="p-2 py-3 border-bottom">
               <div className={`d-flex justify-content-center`}>
                 {/* <div className={styles.dotIcon}>
                   <BsCircleFill />
@@ -44,6 +44,11 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className={`${styles.footerText} text-center p-3 pt-5`}>
+          These are some of the services I'm happy to help my customers with.
+          Reach out on the <Link href={"/contact"}>Contact</Link> page for more
+          information.
         </div>
       </div>
       <Footer />
