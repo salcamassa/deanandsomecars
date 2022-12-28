@@ -16,7 +16,7 @@ const Navbar = ({ lightVersion }: { lightVersion?: boolean }) => {
   return (
     <nav
       className={`navbar navbar-expand-lg ${
-        lightVersion ? "light-version" : ""
+        lightVersion ? "light-version navbar-dark" : ""
       }`}
     >
       <div className="container">

@@ -12,7 +12,7 @@ import Navbar from "../components/layout/Navbar";
 import styles from "../styles/Contact.module.scss";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("FIXTHIS********************");
+  const [state, handleSubmit] = useForm("mlekrkao");
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -27,8 +27,8 @@ const Contact = () => {
       <div className="container-fluid px-0">
         <div className={styles.sectionContainer}>
           <div id="contactForm" className="container my-5">
-            <div className="row border rounded shadow-sm">
-              <div className="col-lg-4 p-5 contact-info">
+            <div className="row  gy-5">
+              <div className="col-lg-4 p-5 contact-info border rounded shadow-sm">
                 <div className="fs-3 fw-bold pb-3">Hello!</div>
                 <div>
                   I'm Dean Routi of <i>Dean & Some Cars.</i>
@@ -134,7 +134,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-8 p-5 bg-white">
+              <div className="col-lg-8 p-5 bg-white border rounded shadow-sm">
                 <div className="d-flex justify-content-between align-items-center pb-3">
                   <div className="fs-3 fw-bold color-dg">Send Me a Message</div>
                   <a
