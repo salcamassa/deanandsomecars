@@ -1,7 +1,8 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { useState } from "react";
 import {
-  FaCheck, FaFacebookSquare,
+  FaCheck,
+  FaFacebookSquare,
   FaInstagram,
   FaLinkedin,
   FaSnapchatSquare
@@ -11,16 +12,37 @@ import Footer from "../components/layout/Footer";
 import Navbar from "../components/layout/Navbar";
 import styles from "../styles/Contact.module.scss";
 
-const Contact = () => {
+const Contact = (query: any) => {
+
+  const [contactInfo, setContactInfo] = useState({
+    firstName: query.query.firstName || "",
+    lastName: query.query.lastName || "",
+    phone: query.query.phone || "",
+    email: query.query.email || "",
+    vehicleType: query.query.vehicleType || "",
+  });=
+
+  const handleChange = (event: any) => {
+    setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
+  };
   const [state, handleSubmit] = useForm("mlekrkao");
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [county, setCounty] = useState("");
-  const [city, setCity] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [message, setMessage] = useState("");
+  const vehicleOptions = [
+    "Any Vehicle Type",
+    "Not Sure What Vehicle Type",
+    "Electric",
+    "Plug-in Hybrid ",
+    "Sedan",
+    "Small SUV",
+    "Midsize SUV",
+    "Large SUV",
+    "4x4 Vehicle",
+    "Truck",
+    "Minivan",
+    "Hatchback",
+    "Coupe",
+  ];
+
   return (
     <div className="bg-white">
       <Navbar />
@@ -157,10 +179,12 @@ const Contact = () => {
                       <input
                         id="contactFirstName"
                         type="text"
-                        name="First Name"
+                        name="firstName"
                         className="form-control"
                         placeholder="First name"
                         required={true}
+                        value={contactInfo.firstName}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col-md-6">
@@ -168,10 +192,12 @@ const Contact = () => {
                       <input
                         id="contactLastName"
                         type="text"
-                        name="Last Name"
+                        name="lastName"
                         className="form-control"
                         placeholder="Last name"
                         required={true}
+                        value={contactInfo.lastName}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -181,9 +207,11 @@ const Contact = () => {
                       <input
                         id="contactPhone"
                         type="text"
-                        name="Phone Number"
+                        name="phone"
                         className="form-control"
                         placeholder="Phone"
+                        value={contactInfo.phone}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col-md-6">
@@ -191,9 +219,11 @@ const Contact = () => {
                       <input
                         id="email"
                         type="email"
-                        name="Email"
+                        name="email"
                         className="form-control"
                         placeholder="Email"
+                        value={contactInfo.email}
+                        onChange={handleChange}
                         required={true}
                       />
                       <ValidationError
@@ -202,6 +232,30 @@ const Contact = () => {
                         errors={state.errors}
                       />
                     </div>
+                  </div>
+                  <div className="form-group pt-3">
+                    <label htmlFor="vehicleType">I'm looking for...</label>
+                    <select
+                      className="form-select"
+                      id="lookingFor"
+                      name="vehicleType"
+                      value={contactInfo.vehicleType}
+                      onChange={handleChange}
+                    >
+                      {vehicleOptions.map((o, i) => (
+                        <option key={i}>{o}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="form-group pt-3">
+                    <label htmlFor="subject">Subject</label>
+                    <input
+                      id="subject"
+                      type="text"
+                      name="Subject"
+                      className="form-control"
+                      placeholder="Auto Loan, Services Offered, etc."
+                    />
                   </div>
                   <div className="form-group pt-3">
                     <label htmlFor="contactMessage">Message</label>
@@ -253,6 +307,10 @@ const Contact = () => {
       <Footer />
     </div>
   );
+};
+
+Contact.getInitialProps = ({ query }: { query: any }) => {
+  return { query };
 };
 
 export default Contact;

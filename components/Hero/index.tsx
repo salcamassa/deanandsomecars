@@ -1,12 +1,38 @@
-import { useForm, ValidationError } from "@formspree/react";
+// import { useForm, ValidationError } from "@formspree/react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import { FaCar, FaCheck, FaMedal, FaRegSmile } from "react-icons/fa";
 import heroBg from "../../public/toyota-bg.jpeg";
 import Navbar from "../layout/Navbar";
 import styles from "./hero.module.scss";
 
 const Hero = () => {
-  const [state, handleSubmit] = useForm("''");
+
+  const [contactInfo, setContactInfo] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    vehicleType: "",
+  });
+
+  const handleChange = (event: any) => {
+    setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
+  };
+
+  const sendToContactPage = (event: any) => {
+    event.preventDefault();
+    console.log("contactInfo", contactInfo);
+    setContactInfo({
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      vehicleType: "",
+    });
+  };
+
   const vehicleOptions = [
     "Any Vehicle Type",
     "Not Sure What Vehicle Type",
@@ -28,7 +54,9 @@ const Hero = () => {
       <div className={`${styles.heroContainer} container-fluid px-0`}>
         <div className={styles.heroGradient}>
           <Navbar lightVersion={true} />
-          <div className={`${styles.heroHeight} container d-flex flex-wrap justify-content-between align-items-center`}>
+          <div
+            className={`${styles.heroHeight} container d-flex flex-wrap justify-content-between align-items-center`}
+          >
             <div
               className={`${styles.heroTextContainer} text-start text-white col-12 col-md-6 m-x-3`}
             >
@@ -51,17 +79,19 @@ const Hero = () => {
               className={`${styles.heroForm} col-12 col-md-6 text-start p-4`}
             >
               <h3 className="fw-bold mb-2">Get Started</h3>
-              <form className="contact-form" onSubmit={handleSubmit}>
+              <form className="contact-form" onSubmit={sendToContactPage}>
                 <div className="row">
                   <div className="col-md-6">
                     <label htmlFor="contactFirstName">First Name</label>
                     <input
                       id="contactFirstName"
                       type="text"
-                      name="First Name"
+                      name="firstName"
                       className="form-control"
                       placeholder="First name"
                       required={true}
+                      value={contactInfo.firstName}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="col-md-6">
@@ -69,10 +99,12 @@ const Hero = () => {
                     <input
                       id="contactLastName"
                       type="text"
-                      name="Last Name"
+                      name="lastName"
                       className="form-control"
                       placeholder="Last name"
                       required={true}
+                      value={contactInfo.lastName}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -82,43 +114,49 @@ const Hero = () => {
                     <input
                       id="contactPhone"
                       type="text"
-                      name="Phone Number"
+                      name="phone"
                       className="form-control"
                       placeholder="Phone"
+                      value={contactInfo.phone}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="col-md-6">
-                    <label htmlFor="xip">Zip Code</label>
+                    <label htmlFor="xip">Email Address</label>
                     <input
-                      id="zip"
-                      type="zip"
-                      name="Zip Code"
+                      id="email"
+                      type="email"
+                      name="email"
                       className="form-control"
-                      placeholder="Zip Code"
+                      placeholder="Email"
+                      value={contactInfo.email}
+                      onChange={handleChange}
                     />
-                    <ValidationError
-                      prefix="Zip Code"
-                      field="zipCode"
+                    {/* <ValidationError
+                      prefix="Email"
+                      field="email"
                       errors={state.errors}
-                    />
+                    /> */}
                   </div>
                 </div>
                 <div className="form-group pt-3">
                   <label htmlFor="LookingFor">I'm looking for...</label>
-                  <select className="form-select" id="lookingFor">
+                  <select
+                    className="form-select"
+                    id="lookingFor"
+                    name="vehicleType"
+                    value={contactInfo.vehicleType}
+                    onChange={handleChange}
+                  >
                     {vehicleOptions.map((o, i) => (
                       <option key={i}>{o}</option>
                     ))}
                   </select>
                 </div>
                 <div
-                  className={`${
-                    state.succeeded
-                      ? "justify-content-between"
-                      : "justify-content-end"
-                  } d-flex  align-items-center pt-3`}
+                  className={`${"justify-content-end"} d-flex align-items-center pt-3`}
                 >
-                  {state.succeeded && (
+                  {/* {state.succeeded && (
                     <div
                       className="alert alert-success d-flex align-items-center my-2 me-2"
                       role="alert"
@@ -131,16 +169,23 @@ const Hero = () => {
                         shortly.
                       </div>
                     </div>
-                  )}
+                  )} */}
 
                   <div>
-                    <button
-                      className={`${styles.submitBtn} btn btn-outline-success`}
-                      type="submit"
-                      disabled={state.submitting}
+                    <Link
+                      href={{
+                        pathname: "/contact",
+                        query: contactInfo,
+                      }}
                     >
-                      Submit
-                    </button>
+                      <button
+                        className={`${styles.submitBtn} btn btn-outline-success`}
+                        type="submit"
+                        // disabled={state.submitting}
+                      >
+                        Submit
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </form>
@@ -155,7 +200,6 @@ const Hero = () => {
             layout="fill"
           />
         </div>
-
       </div>
       <div className={`${styles.heroStats} container-fluid`}>
         <div className="container d-flex flex-wrap justify-content-around py-3">

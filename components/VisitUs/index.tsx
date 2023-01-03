@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { FiClock, FiMap, FiPhone } from "react-icons/fi";
-import dronePlaceholder from "../../public/drone_placeholder.png";
 
 const VisitUs = () => {
   return (
@@ -9,11 +7,9 @@ const VisitUs = () => {
         <div className="container py-5 my-5">
           <div className="row text-center">
             <div className="col-lg-8">
-              <Image
-                src={dronePlaceholder}
-                alt="Drone footage"
-                layout="responsive"
-              />
+              <video autoPlay muted loop className="dsc-video">
+                <source src="/srt_drone.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className="col-lg-4">
               <div className="p-3 h-100 text-center visit-us-box">
