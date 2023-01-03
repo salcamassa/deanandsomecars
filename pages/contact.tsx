@@ -20,7 +20,7 @@ const Contact = (query: any) => {
     phone: query.query.phone || "",
     email: query.query.email || "",
     vehicleType: query.query.vehicleType || "",
-  });=
+  });
 
   const handleChange = (event: any) => {
     setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });

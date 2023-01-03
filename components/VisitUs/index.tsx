@@ -8,7 +8,7 @@ const VisitUs = () => {
           <div className="row text-center">
             <div className="col-lg-8">
               <video autoPlay muted loop className="dsc-video">
-                <source src="/srt_drone.mp4" type="video/mp4" />
+                <source src="/srt_drone.mov" type="video/mp4" />
               </video>
             </div>
             <div className="col-lg-4">
