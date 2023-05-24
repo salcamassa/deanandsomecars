@@ -14,6 +14,22 @@ const Home: NextPage = () => {
       <Head>
         <title>Dean & Some Cars</title>
         <meta name="description" content="Dean & Some Cars" />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-H74Q2EK4N4`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-H74Q2EK4N4', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <Hero />
       <Offerings />
